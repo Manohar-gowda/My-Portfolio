@@ -1,0 +1,63 @@
+
+.fireworks-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: explode 1.5s ease-out infinite;
+  }
+  
+  @keyframes explode {
+    0% {
+      transform: scale(0.5) translate(0, 0);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(2) translate(calc(50px - 50%), calc(-100px + 50%));
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(0.8) translate(calc(-50px + 50%), calc(100px - 50%));
+      opacity: 0;
+    }
+  }
+
+  .firework:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+    background: red;
+  }
+  .firework:nth-child(2) {
+    top: 30%;
+    left: 70%;
+    animation-delay: 0.2s;
+    background: yellow;
+  }
+  .firework:nth-child(3) {
+    top: 50%;
+    left: 40%;
+    animation-delay: 0.4s;
+    background: blue;
+  }
+  .firework:nth-child(4) {
+    top: 70%;
+    left: 80%;
+    animation-delay: 0.6s;
+    background: green;
+  }
+  .firework:nth-child(5) {
+    top: 90%;
+    left: 30%;
+    animation-delay: 0.8s;
+    background: purple;
+  }
+  
